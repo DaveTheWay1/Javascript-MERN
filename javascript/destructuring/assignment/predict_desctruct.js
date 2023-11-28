@@ -18,7 +18,10 @@ const employee = {
 const { name: otherName } = employee;
 
 // console.log(name); 
-// * output: Error as name cant really but used to refer to whats intended rather it should be otherName - correct
+// * output: Error.
+// * what's happening on line 18 is that we are setting name to be referred to as otherName. 
+// * In other words, otherName now stores 'Elon' - correct
+// * when this occurs we can no longer use name to refer to 'Elon' -- youll get an error --- you must use otherName.
 console.log(otherName);
 // * output: Elon - correct
 
