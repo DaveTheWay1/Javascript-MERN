@@ -1,0 +1,16 @@
+javascript
+to run javascript file: node file_name
+
+for vite
+1. Terminal command to install a React app with Vite: npm create vite@latest
+2. Enter the new application's name
+3. Select the React option
+4. Select the JavaScript + SWC option
+5. Terminal command to navigate to the new project folder: cd your-project-name-here
+6. Terminal command to install node_modules folder: npm install
+7. Terminal command to run the application: npm run dev
+
+for create-react-app
+1. Terminal command to install a React app with CRA: npx create-react-app your-project-name-here
+2. Terminal command to navigate to the new project folder: cd your-project-name-here
+3. Terminal command to run the application: npm run start

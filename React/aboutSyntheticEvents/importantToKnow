@@ -1,0 +1,5 @@
+There are a few key things to keep in mind about React's synthetic event system:
+
+1. The event names are instead camelCased vs lowercase (i.e "onclick" becomes "onClick")
+2. Returning false will not work with any event to prevent default browser behaviors (like refreshing a page or "bubbling" the event). You will need to manually callevent.stopPropagation() or event.preventDefault()as necessary.
+3. Events cannot be called asynchronously because of how React "pools" the Synthetic events
