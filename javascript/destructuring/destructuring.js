@@ -8,6 +8,9 @@ const person = {
     createdAt: 1543945177623
 };
 const {lastName} = person
+// * must be  in {} because lastName, 
+// * what we are looking for, is coming from an object {} 
+// * of person.
 console.log(lastName);
 // output:Marley
 
@@ -30,29 +33,33 @@ console.log(lastName);
 const animals = ['horse', 'dog', 'fish', 'cat', 'bird'];
 
 const getAnimal = (animals) => {
+  // we set a function who will take a parameters.
     for (let i = 0; i < animals.length; i++) {
-    const animal = animals[i];
-    console.log(animal);
-    if (animal === 'dog') {
-      break; // Stop the loop when 'dog' is encountered
-    }
+      // create a for loop
+        //this for  loop will start at 0 and end at the length of
+        // of the  list passed through the parameter
+        const animal = animals[i];
+      if (animal === 'dog') {
+        console.log(animal);
+        break; // Stop the loop when 'dog' is encountered
+      }
     }
 };
 getAnimal(animals);
 // output: 
-// horse
 // dog
+
+// const animals = ['horse', 'dog', 'fish', 'cat', 'bird'];
 const selectedAnimal = (animals) => {
   for (let index = 0; index < animals.length; index++){
-    console.log(animals[index])
     if (animals[index] === 'dog'){
+      console.log(animals[index])
       break;
     }
   }
 };
 selectedAnimal(animals)
 // output: 
-// horse
 // dog
 
 // * Assume we want email from person and the first animal as standalone variables.

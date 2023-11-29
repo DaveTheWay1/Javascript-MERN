@@ -21,11 +21,18 @@ const sayName = (name) => {
 };
 sayName('David')
 
+const sayHelloName = (name) => {
+    console.log(`Hello ${name}`);
+};
+sayHelloName('David')
+// output: Hello David
 // * Single parameters don't need parentheses 
 // * and with the function body being a single statement we can remove the curly braces.
 
 const sayHi = name => console.log(`Hi ${name}`);
 sayHi('david')
+// the difference from the two above is simply the curly brackets. if you need more than one line of code
+// then you need brackets. if you arent doing more than one line of code then you dont need them
 
 const singleParamenter = single => console.log(`who is single? ${single}`);
 singleParamenter('jimmy');
