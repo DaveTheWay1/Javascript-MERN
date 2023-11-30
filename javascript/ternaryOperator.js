@@ -45,3 +45,19 @@ ternaryTest();
 // : false
 // * following the ? is where you have the result for true
 // * following the : is where you have the result for false
+
+const greeting = (person) => {
+    const name = person ? person.name : "stranger";
+    return `Howdy, ${name}`;
+    };
+
+  console.log(greeting({ name: "Alice" })); // "Howdy, Alice"
+  console.log(greeting(null)); // "Howdy, stranger"
+
+// Notice line 54? how we access the object attribute of name setting it to alice
+// instead of just putting greeting(alice)
+// this is because of line 50 making it so that what is being passed in require an object
+// to have the attribute of name. bc line 50 has person.name aka i need a object (person) 
+// that has(.) an attribute of (name)
+// goes hand in hand a little with how null works. null doesnt have an attribute, and
+// null means empty. without a proper value, an objcet with an attribute of name, it returns stranger

@@ -142,6 +142,8 @@ const objects1 = Object.freeze({
 const objectsAddition = objects1.concat({"name":"success"});
 console.log(objectsAddition);
 // ! concat does not seem to work ob objects
+// * but thats because its not doing what we think it does
+// youre not adding name:success your storing it in success
 
 // * slice
 // ? to make an edit

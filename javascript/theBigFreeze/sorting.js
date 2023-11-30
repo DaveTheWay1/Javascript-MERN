@@ -66,3 +66,37 @@ console.log(sortedGroceries);
 // * If a.item and b.item are equal, 
 // * the sorting function returns 0, 
 // * indicating that their order should not change.
+
+// In the context of the comparison function 
+// (a, b) => (a.item > b.item) ? 1 : -1 used with the .sort() method:
+
+// The function (a, b) => (a.item > b.item) ? 1 : -1 is indeed responsible 
+// for determining the sorting order of elements in the array based on 
+// the comparison of the "item" property of the objects a and b.
+
+// When comparing two items a.item and b.item:
+
+// If a.item is considered greater (comes later in lexicographical order) 
+// than b.item, the function returns 1.
+// If a.item is considered less (comes earlier in lexicographical order) 
+// or equal to b.item, the function returns -1.
+// In the context of the .sort() method:
+
+// When the comparison function returns a positive number 
+// (1 in this case), it indicates that a should come after b in the sorted array, 
+// according to the sorting criteria.
+// When the comparison function returns a negative number (-1 in this case),
+//  it indicates that a should come before b in the sorted array, according 
+// to the sorting criteria.
+// Therefore, when using this comparison function with .sort():
+
+// Returning 1 means that a is considered greater 
+// (should come later in the sorted array).
+// Returning -1 means that a is considered less 
+// (should come earlier in the sorted array).
+// This function is designed to sort the array 
+// elements in ascending order based on the lexicographical 
+// comparison of the "item" property values (a.item and b.item). 
+// Any elements where a.item is considered greater than b.item will 
+// be positioned later in the sorted array, and elements where a.item is 
+// considered less or equal to b.item will be positioned earlier.

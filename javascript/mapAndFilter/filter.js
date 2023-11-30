@@ -14,6 +14,8 @@ const odds = vals.filter( crip => crip % 2 != 0 );
 console.log(odds);
 // output: [ 1, 3, 5 ]
 
+// * if its filter and the result is true that means that you add them to the filtered list you are creating.
+
 // ? If we want only the groceries that have the letter "o" in them we could write...
 const groceries = ["pearl onions", "cremini mushrooms", "thyme"];
 const oFoods = groceries.filter( item => item.includes("o") );
