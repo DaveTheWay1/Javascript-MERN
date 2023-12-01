@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './components/Header';
 import AnotherFact from './components/AnotherFact';
+import Test from './components/Test';
 function App() {
   return (
     <div className="App">
@@ -11,6 +12,7 @@ function App() {
       }
       <Header firstName={ "David" } lastName={ "Ramirez-Vazquez" } dogName={"Cazador"}/>
       <AnotherFact age={24} iAm="Sensational" />
+      <Test success={"Success"}/>
     </div>
   );
 }
