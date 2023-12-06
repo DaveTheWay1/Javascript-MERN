@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import PredictOutput from './components/PredictOutput'
 import './App.css'
 

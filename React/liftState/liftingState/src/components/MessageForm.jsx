@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 
 const MessageForm = ( props ) => {
+    const {onNewMessage} = props;
     const [msg, setMessage] = useState("");
     const handleSubmit = (e) => {
         e.preventDefault();
-        props.onNewMessage( msg );
+        onNewMessage( msg );
+        // props.onNewMessage( msg );
     };
     const handleChange = (e) => {
         setMessage(e.target.value);

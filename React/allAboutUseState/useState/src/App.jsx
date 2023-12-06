@@ -4,6 +4,7 @@ import ForSale from './components/ForSale'
 
 function App() {
   const [totalInCart, setTotalInCart] = useState(0);
+
   const [likes, setLikes] = useState(0);
   const supportStore = () => {
     // this is just for now pretending that it's a person logged in preventing them from supporting more than one.
@@ -14,7 +15,6 @@ function App() {
 
   const clearCart = () => {
     setTotalInCart(0);
-
     // setStock({
     //   "Air Forces":11,
     //   "Nike Wind Breaker":3
