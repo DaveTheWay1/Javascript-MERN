@@ -56,5 +56,6 @@ const Display = (props) => {
         </div>
     )
 }
-
+// * ThE STRONGEST WAY TO KNOW WHY IDX IS USED IN ONE MAP BUT NOT THE OTHER IS BC ONE IS RENDERING WHILE THE OTHER IS NOT
+// * "on requires idx within their map" is the reason but easy to tell by whether or not it is rendering
 export default Display;
