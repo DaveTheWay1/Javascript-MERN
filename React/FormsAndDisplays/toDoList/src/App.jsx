@@ -1,6 +1,6 @@
 import Form from './components/Form';
 import Display from './components/Display';
-import {  useState } from 'react';
+import { useState } from 'react';
 import './components/Display.css'
 
 function App() {
