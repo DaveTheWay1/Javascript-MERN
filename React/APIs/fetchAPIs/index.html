@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "root"></div>
+    <script>
+        fetch("https://pokeapi.co/api/v2/pokemon")
+            .then(response => {
+            // not the actual JSON response body but the entire HTTP response
+            return response.json();
+        }).then(response => {
+            // we now run another promise to parse the HTTP response into usable JSON
+            console.log(response);
+        }).catch(err=>{
+            console.log(err);
+        });
+    </script>
+</body>
+</html>
+
+<!-- In the provided code, there's a fetch call made to the PokeAPI 
+    to retrieve information about Pokémon. Let's break down the process 
+    step by step:
+
+fetch("https://pokeapi.co/api/v2/pokemon"): This initiates an HTTP 
+request to the specified URL (https://pokeapi.co/api/v2/pokemon) to 
+fetch data from the PokeAPI. It returns a Promise that resolves to 
+the entire HTTP response.
+
+.then(response => { return response.json(); }): This is a Promise 
+chain that operates on the response received from the API call. 
+The response.json() method parses the response body as JSON and r
+eturns a Promise that resolves to the parsed JSON data.
+
+.then(response => { console.log(response); }): This is another 
+.then() block chained to the previous one. Here, response 
+represents the parsed JSON data from the API response body. 
+In this example, it logs the parsed JSON data to the console.
+
+.catch(err => { console.log(err); }): This .catch() block 
+catches any errors that might occur during the execution of 
+the promises, logging them to the console.
+
+Explanation:
+
+The first .then() is used to handle the initial HTTP response from the API.
+The second .then() processes the HTTP response, parsing it as JSON. 
+This step is necessary because the initial response from fetch might 
+not directly contain the JSON data, but rather the entire HTTP response, 
+including headers and other metadata.
+The third .then() block logs the parsed JSON data, which would contain
+information about Pokémon in this case.
+The .catch() block captures any errors that might occur during the
+process, such as network issues, server errors, or issues related to 
+parsing the response.
+In summary, the sequence of .then() blocks in the Promise chain 
+allows you to handle different stages of the asynchronous process: 
+receiving the HTTP response, parsing it as JSON, and handling any 
+errors that might occur along the way. -->
